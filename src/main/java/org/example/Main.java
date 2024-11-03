@@ -13,6 +13,7 @@ public class Main {
             String className = args[0];
             List<String> jarPaths = new ArrayList<>(Arrays.asList(args).subList(1, args.length));
             var JarFinder = new JarDependenciesFinder(className, jarPaths);
+            JarFinder.classGraphChecker();
         }
     }
 }

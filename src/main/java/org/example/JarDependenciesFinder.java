@@ -4,8 +4,8 @@ import io.github.classgraph.ClassGraph;
 import io.github.classgraph.ClassInfo;
 import io.github.classgraph.ClassInfoList;
 import io.github.classgraph.ScanResult;
-
-import java.util.ArrayList;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 public class JarDependenciesFinder {
@@ -14,14 +14,15 @@ public class JarDependenciesFinder {
 
     public JarDependenciesFinder(String nameClass, List<String> jarPaths) {
         this.nameClass = nameClass;
-        this.jars = new ArrayList<>();
+        this.jars = jarPaths;
     }
 
     void classGraphChecker() {
         var classGraph = new ClassGraph().overrideClasspath(jars).enableClassInfo().enableInterClassDependencies();
         try (ScanResult scanResult = classGraph.scan()) {
             ClassInfo classInfo = getClassInfo(scanResult);
-            checkForDependencies(scanResult, classInfo);
+            if (classInfo != null)
+                checkForDependencies(scanResult, classInfo);
         }
     }
 
@@ -36,15 +37,23 @@ public class JarDependenciesFinder {
     void checkForDependencies(ScanResult scanResult, ClassInfo classInfo) {
         ClassInfoList dependencyList = classInfo.getClassDependencies();
         if(dependencyList.isEmpty()) {
-            System.out.println("false: " + nameClass + jars.stream().toString());
+            printResult("false");
         } else {
             for (ClassInfo dependency : dependencyList) {
                 if (!scanResult.getAllClasses().contains(dependency)) {
-                    System.out.println("false: " + nameClass + jars.stream().toString());
+                    printResult("false");
                 } else {
-                    System.out.println("true: " + nameClass + jars.stream().toString());
+                    printResult("true");
                 }
             }
+        }
+    }
+
+    void printResult(String result){
+        System.out.print(result + ": " + nameClass + " ");
+        for (String jar : jars) {
+            Path path = Paths.get(jar);
+            System.out.print(path.getFileName().toString() + " ");
         }
     }
 
