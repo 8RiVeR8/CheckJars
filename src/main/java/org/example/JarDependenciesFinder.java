@@ -17,10 +17,11 @@ public class JarDependenciesFinder {
         this.jars = new ArrayList<>();
     }
 
-    void checkForDependencies() {
+    void classGraphChecker() {
         var classGraph = new ClassGraph().overrideClasspath(jars).enableClassInfo().enableInterClassDependencies();
         try (ScanResult scanResult = classGraph.scan()) {
-            ClassInfo classInfoList = getClassInfo(scanResult);
+            ClassInfo classInfo = getClassInfo(scanResult);
+            checkForDependencies(scanResult, classInfo);
         }
     }
 
@@ -31,4 +32,20 @@ public class JarDependenciesFinder {
         }
         return mainClassInfo;
     }
+
+    void checkForDependencies(ScanResult scanResult, ClassInfo classInfo) {
+        ClassInfoList dependencyList = classInfo.getClassDependencies();
+        if(dependencyList.isEmpty()) {
+            System.out.println("false: " + nameClass + jars.stream().toString());
+        } else {
+            for (ClassInfo dependency : dependencyList) {
+                if (!scanResult.getAllClasses().contains(dependency)) {
+                    System.out.println("false: " + nameClass + jars.stream().toString());
+                } else {
+                    System.out.println("true: " + nameClass + jars.stream().toString());
+                }
+            }
+        }
+    }
+
 }

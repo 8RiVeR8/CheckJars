@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa62953b-bbf0-4750-a70f-326c8018db4e" name="Changes" comment="Jar dependencies finder class init">
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/JarDependenciesFinderTest.java" afterDir="false" />
+    <list default="true" id="aa62953b-bbf0-4750-a70f-326c8018db4e" name="Changes" comment="Test for getClassInfo">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/JarDependenciesFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/JarDependenciesFinder.java" afterDir="false" />
     </list>
@@ -208,7 +207,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730571617077</updated>
       <workItem from="1730571618251" duration="4252000" />
-      <workItem from="1730629173494" duration="6242000" />
+      <workItem from="1730629173494" duration="7333000" />
     </task>
     <task id="LOCAL-00001" summary="Taking input">
       <option name="closed" value="true" />
@@ -234,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730633312658</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Test for getClassInfo">
+      <option name="closed" value="true" />
+      <created>1730635781726</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1730635781726</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,6 +250,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Taking input" />
     <MESSAGE value="Jar dependencies finder class init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jar dependencies finder class init" />
+    <MESSAGE value="Test for getClassInfo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test for getClassInfo" />
   </component>
 </project>
