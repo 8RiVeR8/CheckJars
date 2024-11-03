@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa62953b-bbf0-4750-a70f-326c8018db4e" name="Changes" comment="checkForDependencies implementation">
+    <list default="true" id="aa62953b-bbf0-4750-a70f-326c8018db4e" name="Changes" comment="Implementation completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/JarDependenciesFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/JarDependenciesFinder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/JarDependenciesFinderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/JarDependenciesFinderTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,17 +109,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.jarPathFalse">
-    <configuration name="jarPath" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="17" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
-      <module name="CheckJars.main" />
-      <option name="PROGRAM_PARAMETERS" value="com.jetbrains.internship2024.ClassB $USER_HOME$/Desktop/internship2024_1501-main/build/libs/ModuleA-1.0.jar $USER_HOME$/Desktop/internship2024_1501-main/build/libs/ModuleB-1.0.jar" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.JarDependenciesFinderTest">
     <configuration name="jarPathFalse" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -129,6 +119,80 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="jarPathFalse2" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="CheckJars.main" />
+      <option name="PROGRAM_PARAMETERS" value="com.jetbrains.internship2024.SomeAnotherClass $USER_HOME$/Desktop/internship2024_1501-main/build/libs/ModuleA-1.0.jar" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="jarPathTrue" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="CheckJars.main" />
+      <option name="PROGRAM_PARAMETERS" value="com.jetbrains.internship2024.ClassB $USER_HOME$/Desktop/internship2024_1501-main/build/libs/ModuleA-1.0.jar $USER_HOME$/Desktop/internship2024_1501-main/build/libs/ModuleB-1.0.jar" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="jarPathTrue2" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="CheckJars.main" />
+      <option name="PROGRAM_PARAMETERS" value="com.jetbrains.internship2024.ClassA $USER_HOME$/Desktop/internship2024_1501-main/build/libs/ModuleA-1.0.jar" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="jarPathTrue3" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="CheckJars.main" />
+      <option name="PROGRAM_PARAMETERS" value="com.jetbrains.internship2024.SomeAnotherClass $USER_HOME$/Desktop/internship2024_1501-main/build/libs/ModuleA-1.0.jar $USER_HOME$/Desktop/internship2024_1501-main/build/libs/commons-io-2.16.1.jar" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="jarPathTrue4" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="CheckJars.main" />
+      <option name="PROGRAM_PARAMETERS" value="com.jetbrains.internship2024.ClassB1 $USER_HOME$/Desktop/internship2024_1501-main/build/libs/ModuleB-1.0.jar" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JarDependenciesFinderTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.JarDependenciesFinderTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="JarDependenciesFinderTest.shouldNotReturnClassInfo" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -179,13 +243,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.jarPath" />
+      <item itemvalue="Application.jarPathTrue" />
       <item itemvalue="Application.jarPathFalse" />
+      <item itemvalue="Application.jarPathTrue2" />
+      <item itemvalue="Application.jarPathFalse2" />
+      <item itemvalue="Application.jarPathTrue3" />
+      <item itemvalue="Application.jarPathTrue4" />
+      <item itemvalue="Gradle.JarDependenciesFinderTest" />
       <item itemvalue="Gradle.JarDependenciesFinderTest.shouldNotReturnClassInfo" />
       <item itemvalue="Gradle.JarDependenciesFinderTest.shouldReturnClassInfo" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.JarDependenciesFinderTest" />
         <item itemvalue="Gradle.JarDependenciesFinderTest.shouldReturnClassInfo" />
         <item itemvalue="Gradle.JarDependenciesFinderTest.shouldNotReturnClassInfo" />
       </list>
@@ -208,7 +278,7 @@
       <option name="presentableId" value="Default" />
       <updated>1730571617077</updated>
       <workItem from="1730571618251" duration="4252000" />
-      <workItem from="1730629173494" duration="8821000" />
+      <workItem from="1730629173494" duration="10378000" />
     </task>
     <task id="LOCAL-00001" summary="Taking input">
       <option name="closed" value="true" />
@@ -250,7 +320,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730638342092</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Implementation completed">
+      <option name="closed" value="true" />
+      <created>1730639385306</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730639385306</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +339,7 @@
     <MESSAGE value="Jar dependencies finder class init" />
     <MESSAGE value="Test for getClassInfo" />
     <MESSAGE value="checkForDependencies implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="checkForDependencies implementation" />
+    <MESSAGE value="Implementation completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementation completed" />
   </component>
 </project>

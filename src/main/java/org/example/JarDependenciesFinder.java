@@ -36,17 +36,18 @@ public class JarDependenciesFinder {
 
     void checkForDependencies(ScanResult scanResult, ClassInfo classInfo) {
         ClassInfoList dependencyList = classInfo.getClassDependencies();
+        boolean allDependenciesPresent = true;
         if(dependencyList.isEmpty()) {
             printResult("false");
-        } else {
-            for (ClassInfo dependency : dependencyList) {
-                if (!scanResult.getAllClasses().contains(dependency)) {
-                    printResult("false");
-                } else {
-                    printResult("true");
-                }
+            return;
+        }
+        for (ClassInfo dependency : dependencyList) {
+            if (!scanResult.getAllClasses().contains(dependency)) {
+                allDependenciesPresent = false;
+                break;
             }
         }
+        printResult(allDependenciesPresent ? "true" : "false");
     }
 
     void printResult(String result){

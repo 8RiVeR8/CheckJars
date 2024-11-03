@@ -14,10 +14,9 @@ import static org.junit.jupiter.api.Assertions.*;
 class JarDependenciesFinderTest {
     @Test
     public void shouldReturnClassInfo() {
-        String className = "com.jetbrains.internship2024.ClassB";
+        String className = "com.jetbrains.internship2024.SomeAnotherClass";
         List<String> jars = new ArrayList<>();
-        jars.add("/Users/maks_rz/Desktop/internship2024_1501-main/build/libs/ModuleB-1.0.jar");
-        jars.add("/Users/maks_rz/Desktop/internship2024_1501-main/build/libs/ModuleA-1.0.jar");
+        jars.add("path/ModuleA-1.0.jar");
         final var jarsDependenciesFinder = new JarDependenciesFinder(className, jars);
 
         var classGraph = new ClassGraph().overrideClasspath(jars).enableClassInfo().enableInterClassDependencies();
@@ -42,7 +41,7 @@ class JarDependenciesFinderTest {
     public void shouldNotReturnClassInfo() {
         String className = "qgioerjogijqeriogjioerjb";
         List<String> jars = new ArrayList<>();
-        jars.add("/Users/maks_rz/Desktop/internship2024_1501-main/build/libs/ModuleB-1.0.jar");
+        jars.add("path/ModuleB-1.0.jar");
         final var jarsDependenciesFinder = new JarDependenciesFinder(className, jars);
         var classGraph = new ClassGraph().overrideClasspath(jars).enableClassInfo().enableInterClassDependencies();
         try (ScanResult scanResult = classGraph.scan()) {
